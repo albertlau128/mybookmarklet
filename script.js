@@ -37,17 +37,17 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("lang-select").addEventListener("change", fetchWeatherData);
 });
 
-function fetchMetarTafData(){
-    fetch(`https://aviationweather.gov/api/data/metar?ids=VHHH&hours=0&order=id%2C-obs&sep=true&taf=true`)
+function fetchMetarTafData() {
+    fetch(`https://aviationweather.gov/api/data/metar?ids=VHHH&taf=true`)
         .then(response => response.text())
         .then(data => {
-           splitedData=data.split('\n')
+            splitedData = data.split('\n')
             const metarCode = document.getElementById("metar-code");
             const tafCode = document.getElementById("taf-code");
             console.log(splitedData)
             console.log(data)
             metarCode.innerText = splitedData[0];
-            tafCode.innerText = splitedData[2];
+            tafCode.innerText = splitedData[1];
         })
         .catch(error => console.error(error));
 }
