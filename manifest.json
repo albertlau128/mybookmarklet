@@ -1,0 +1,11 @@
+{
+  "name": "Chrome Extension",
+  "description": "Lorem Ipsum",
+  "version": "0.11",
+  "manifest_version": 3,
+  "action": {
+    "default_popup": "hello.html",
+    "default_icon": "Trollface.png"
+  },
+  "permissions": ["activeTab"]
+}
