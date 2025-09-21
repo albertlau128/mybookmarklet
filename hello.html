@@ -1,31 +1,35 @@
 <!DOCTYPE html>
-<html>
+<html style="min-width: 1000px;">
+
 <head>
-    <title>Weather Data</title>
+    <title>HKO Weather Data</title>
     <style>
         /* CSS styles here */
     </style>
     <script src="script.js"></script>
 </head>
+
 <body>
+
+
     <h3>HKO Weather Data</h3>
-    <label for="lang-select">Language:</label>
+    <p id="fetch-status">Last fetch: N/A</p>
+    <hr>
+    <code id="metar-code"> </code>
+    <hr>
+    <code id="taf-code"> </code>
+    <br>
+    <hr>
     <select id="lang-select">
         <option value="en">English</option>
         <option value="tc">Traditional Chinese</option>
         <option value="sc">Simplified Chinese</option>
     </select>
-    <!-- <button id="fetch-btn">Fetch Data</button> -->
-    <p id="fetch-status">Last fetch: N/A</p>
+    <br>
     <table id="data-table">
-        <thead>
-            <tr>
-                <th>Parameter</th>
-                <th>Value</th>
-            </tr>
-        </thead>
         <tbody id="data-table-body">
         </tbody>
     </table>
 </body>
+
 </html>
